@@ -1,82 +1,80 @@
-# Lightweight React Template for KAVIA
+# Tic Tac Toe Frontend (React)
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A retro-themed Tic Tac Toe game for the web. This is a **two-player, same-device** game that displays the board and announces a winner (or draw) when the game ends.
 
-## Features
+## Requirements
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- Node.js + npm (LTS recommended)
 
-## Getting Started
+## Setup
+
+From this folder:
+
+```bash
+npm install
+```
+
+## Run (Development)
+
+```bash
+npm start
+```
+
+By default, the app runs on port **3000** and will open in your browser automatically.
+
+## Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in development mode.
 
 ### `npm test`
 
-Launches the test runner in interactive watch mode.
+Runs tests in watch mode (Create React App default).
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production into the `build/` folder.
 
-## Customization
+### `npm run eject`
 
-### Colors
+Ejects the Create React App configuration (not recommended unless you know you need it).
 
-The main brand colors are defined as CSS variables in `src/App.css`:
+## Configuration (Environment Variables)
 
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
+This container supports the following environment variables (configured via the container `.env`):
 
-### Components
+- `REACT_APP_API_BASE`
+- `REACT_APP_BACKEND_URL`
+- `REACT_APP_FRONTEND_URL`
+- `REACT_APP_WS_URL`
+- `REACT_APP_NODE_ENV`
+- `REACT_APP_NEXT_TELEMETRY_DISABLED`
+- `REACT_APP_ENABLE_SOURCE_MAPS`
+- `REACT_APP_PORT`
+- `REACT_APP_TRUST_PROXY`
+- `REACT_APP_LOG_LEVEL`
+- `REACT_APP_HEALTHCHECK_PATH`
+- `REACT_APP_FEATURE_FLAGS`
+- `REACT_APP_EXPERIMENTS_ENABLED`
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+Notes:
+- In Create React App, only variables prefixed with `REACT_APP_` are exposed to the browser bundle.
+- If you change environment variables, you typically need to restart `npm start` for them to take effect.
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+## How to Play
 
-## Learn More
+1. Open the app in your browser.
+2. Players take turns placing their marks on the 3×3 grid.
+3. The game ends when a player gets three in a row, or when all squares are filled (draw).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Troubleshooting
 
-### Code Splitting
+- **Port already in use**: stop the process using port 3000 or adjust your environment configuration to use a different port.
+- **Blank page after build**: ensure the app is served from the correct base path (typical CRA deployment consideration).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Internal project / template-based. Add a license file if you plan to distribute this publicly.
